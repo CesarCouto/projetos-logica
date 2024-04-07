@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+
+        const preco_por_unidade = 3.50;
+        const preco_por_duzia = 2.50;
+    
+        let compra = parseInt(prompt('Quantas maças você quer?'));       
+        let res;
+
+        if (compra < 12){
+            res = preco_por_unidade * compra
+            document.write('O valor total é ' + res)
+        } else {
+            res = preco_por_duzia * compra 
+            document.write('O valor total é ' + res)
+        }
+
+
+        
+
+       
+
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>

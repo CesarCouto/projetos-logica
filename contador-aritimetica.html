@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+let valores = [];
+
+
+let soma = 0;
+
+
+for (let i = 0; i < 10; i++) {
+    
+    let valor = parseFloat(prompt("Digite o valor " + (i + 1) + ":"));
+    
+   
+    valores.push(valor);
+    
+    
+    soma += valor;
+}
+
+
+let media = soma / 10;
+
+
+console.log("Valores informados:");
+for (let i = 0; i < valores.length; i++) {
+    console.log(valores[i]);
+}
+
+
+console.log("Média aritmética: " + media);
+
+    </script>
+</body>
+</html>

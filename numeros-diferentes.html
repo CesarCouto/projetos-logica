@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            
+       
+function lervalor(mensagem) {
+    return parseFloat(prompt(mensagem));
+}
+
+
+function  encontrarmaior(a, b, c) {
+    return Math.max(a, b, c);
+}
+
+
+var v1 = lervalor("Digite o primeiro valor:");
+var v2 = lervalor("Digite o segundo valor:");
+var v3 = lervalor("Digite o terceiro valor:");
+
+
+var maior = encontrarmaior(v1, v2, v3);
+
+
+document.write("O maior valor é:", maior);
+
+          
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let poligono = parseInt(prompt('Quantos lados tem seu poligono?'))
+
+        if(poligono === 3) {
+            document.write('O seu poligono é um triangulo <br />')
+            let l1 = parseInt(prompt('Qual o valor do primeiro lado do triangulo?'))
+            let l2 = parseInt(prompt('Qual o valor do segundo lado do triangulo?'))
+            let l3 = parseInt(prompt('Qual o valor do terceiro lado do triangulo?'))
+            perimetro = l1 + l2 + l3 
+            document.write('O perimetro do seu triangulo é: ' + perimetro)
+        } else if (poligono === 4) {
+            document.write('O seu poligono é um quadrado <br />')
+            let lado = parseFloat(prompt('Quanto é o lado do seu quadrado?'))
+            area = lado * lado
+            document.write('A area do seu quadrado é: ' + area)
+        } else if (poligono === 5) {
+            document.write('O seu poligono é um pentagono')
+        } else if (poligono < 3){
+            document.write('Não é um poligono')
+        } else {
+            document.write('Poligoni não indentificado')
+        }
+
+    </script>
+</body>
+</html>

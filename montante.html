@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montante</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let deposito = parseFloat(prompt("Deposito Mensal: "))
+        let juros = parseFloat(prompt("Taxa de juros (%): ")) / 100
+
+        let montante = 0
+
+        for (let contador =0; contador < 12; contador++){
+            montante += deposito
+            montante += montante * juros
+        }
+
+        document.writeln("Montante Final: R$" + montante.toFixed(2))
+
+
+
+    </script>
+</body>
+</html>

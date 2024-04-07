@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function somaMenorQue72() {
+
+    var numeros = [];
+
+    var soma = 0;
+
+
+    for (var i = 0; i < 6; i++) {
+
+        var numero = parseInt(prompt("Informe um número:"));
+
+
+        numeros.push(numero);
+
+
+        if (numero < 72) {
+
+            soma += numero;
+        }
+    }
+
+    console.log("Valor final da soma: " + soma);
+
+
+    console.log("Valores informados pelo usuário:");
+    for (var j = 0; j < numeros.length; j++) {
+        console.log(numeros[j]);
+    }
+}
+
+
+somaMenorQue72();
+
+    </script>
+</body>
+</html>
