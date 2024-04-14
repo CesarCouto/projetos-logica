@@ -12,15 +12,56 @@
         let usuario = prompt("Qual o usuario?")
         let senha = prompt("Qual é a senha")
 
+       
 
+        function inicio(){
         switch(senha){
             case "2678":
-                document.write("Bem vindo ao hotel " + nome + "" + usuario + " é um imenso prazer telo aqui!");
+                document.write("Bem vindo ao hotel " + nome + "  " + usuario + " é um imenso prazer telo aqui! <br />");
+                menu();
                 break;
             default:
                 document.write("Senha invalida");
+                break;
+                
+        }
+    }
+        function menu() {
+            let escolha = parseInt(prompt('Selecione uma opção (1.Quartos)(2. Depósito )(3. Saque )(4. Sair)'))
+
+            if (escolha === 1){
+                quartos();
+            }
+        }
+
+        function quartos(){
+            let diaria = parseInt(prompt('quantos dias você vai passar no hotel?'))
+            let valor = parseInt(prompt('qual o valor da diaria?'))
+
+            
+            if (diaria <= 0 || diaria > 30) {
+                document.write('diaria invalida');
+            } else if (valor <= 0 || valor > 30) {
+                document.write('valor invalido ' + usuario);
+            } else {
+                let valor_diaria = diaria * valor
+                document.write('o valor de ' + diaria +' dias de hospedagem é: ' + valor_diaria);
+                let hospede = prompt('Qual é o nome do hospede?');
+                let reserva = confirm(hospede + ' voce confirma a hospedagem para ' + hospede + ' por ' + diaria + ' dias');
+                if(reserva) {
+                    document.write(hospede + 'reserva efetuada para ' + hospede + ' o valor total é: ' + valor_diaria);
+                } else {
+                    alert(usario + ' reserva efetuada')
+                    inicio();
+                }
+            }
+        }
+
+        function registro(){
+            
         }
         
+    inicio();
     </script>
 
 </body>

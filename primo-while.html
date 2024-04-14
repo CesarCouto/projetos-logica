@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Solicitar ao usuário para inserir um número inteiro
+var numero = parseInt(prompt("Insira um número inteiro:"));
+
+// Inicializar o contador
+var divisor = 2;
+var primo = true;
+
+// Verificar se o número é primo usando um loop while
+while (divisor < numero) {
+    if (numero % divisor === 0) {
+        // Se o número for divisível por outro número além de 1 e ele mesmo, não é primo
+        primo = false;
+        break; // Não é necessário continuar verificando
+    }
+    divisor++;
+}
+
+// Verificar se o número é primo ou não e exibir o resultado
+if (primo && numero > 1) {
+    document.write(numero + " é um número primo.");
+} else {
+    document.write(numero + " não é um número primo.");
+}
+
+    </script>
+</body>
+</html>
