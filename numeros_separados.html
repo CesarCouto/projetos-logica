@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Função para separar e exibir os dígitos de um número
+function exibirDigitos(numero) {
+    // Garantindo que o número seja positivo
+    numero = Math.abs(numero);
+
+    // Variável para armazenar o resto da divisão
+    let resto;
+
+    // Loop enquanto houver dígitos no número
+    while (numero > 0) {
+        // Obtendo o último dígito do número
+        resto = numero % 10;
+        
+        // Exibindo o dígito
+        document.write(resto);
+
+        // Removendo o último dígito do número
+        numero = Math.floor(numero / 10);
+    }
+}
+
+// Exemplo de uso da função
+let numero = 123456;
+
+document.write("Dígitos do número", numero, ":");
+
+exibirDigitos(numero);
+
+    </script>
+</body>
+</html>
