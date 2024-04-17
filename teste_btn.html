@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Media do Aluno</h1>
+    <p id="notas">As suas notas foram</p>
+    <button onclick="calcular()">Re-calcule</button>
+    
+  
+
+    <script>
+        function calcular(){
+      let n1 = parseFloat(prompt('Qual foi a sua primeira nota?'))
+      let n2 = parseFloat(prompt('Qual foi a sua segunda nota?'))
+        
+      let notas = document.getElementById('notas')
+
+      if(n1 > n2){
+        notas.innerHTML = `Os numeros escolhidos foram ${n1} e ${n2} o maior sendo ${n1}`
+      } else if (n1 < n2){
+        notas.innerHTML = `Os numeros escolhidos foram ${n1} e ${n2} o maior sendo ${n2}`
+      } else{
+        notas.innerHTML = `Os numeros escolhidos foram ${n1} e ${n2} e eles são IGUAIS`
+      }
+    }
+    </script>
+</body>
+</html>

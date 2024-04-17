@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Multiplas Escolhas</h1>
+    <button onclick="menu()">Clique para Iniciar</button>
+    <p id="texto">Clique no botao acima para inicar</p>
+
+
+
+
+
+    <script>
+        function menu(){
+        let n1 = parseFloat(prompt('Me diga o primeiro valor'))
+        let n2 = parseFloat(prompt('Me diga o segundo valor'))
+        let escolha = prompt(`Valores informados ${n1} e ${n2} \n oque vamos fazer?\n [1]Somar\n [2]Subtrair\n [3]Multiplicar\n [4]Dividir`)
+        let texto = document.getElementById('texto')
+        let res;
+
+        if(escolha == 1){
+         res = (n1 + n2)
+            texto.innerHTML = `<p>Calculando</p>`
+            texto.innerHTML += `<p> ${n1} + ${n2} = ${res}`
+        }else if(escolha == 2){
+            res = (n1 - n2)
+            texto.innerHTML = `<p>Calculando</p>`
+            texto.innerHTML += `<p> ${n1} - ${n2} = ${res} </p>`
+        }else if(escolha == 3){
+            res =(n1 * n2)
+            texto.innerHTML = `<p>Calculando</p>`
+            texto.innerHTML += `<p> ${n1} * ${n2} = ${res} </p>`
+        }else if(escolha == 4){
+          res =  (n1 / n2)
+            texto.innerHTML = `<p>Calculando</p>`
+            texto.innerHTML += `<p> ${n1} / ${n2} = ${res} </p>`
+        }else{
+            menu();
+        }
+    }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
