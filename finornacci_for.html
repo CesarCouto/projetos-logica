@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularFibonacci(numero) {
+    let fibonacci = [0, 1]; // Inicializa a sequência de Fibonacci com os dois primeiros números
+
+    // Calcula os números da sequência de Fibonacci até o número fornecido
+    for (let i = 2; fibonacci[i - 1] + fibonacci[i - 2] <= numero; i++) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    }
+
+    return fibonacci;
+}
+
+// Função para ler o número do usuário
+function lerNumero() {
+    return parseInt(prompt("Digite um número inteiro:"));
+}
+
+// Ler o número do usuário
+const numero = lerNumero();
+
+// Calcula e exibe a sequência de Fibonacci até o número fornecido
+const fibonacci = calcularFibonacci(numero);
+document.write("Sequência de Fibonacci até " + numero + ":" + fibonacci.join(", "));
+
+    </script>
+</body>
+</html>

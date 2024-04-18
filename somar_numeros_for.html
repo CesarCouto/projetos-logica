@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Função para ler o número do usuário
+function lerNumero() {
+    return parseInt(prompt("Digite um número inteiro:"));
+}
+
+// Função para calcular a soma dos números pares até o número fornecido
+function calcularSomaPares(numero) {
+    let soma = 0;
+    let contador = 1;
+
+    // Loop enquanto o contador for menor ou igual ao número fornecido
+    while (contador <= numero) {
+        // Verifica se o número é par
+        if (contador % 2 === 0) {
+            soma += contador; // Se for par, adiciona à soma
+        }
+        contador++; // Incrementa o contador
+    }
+
+    return soma;
+}
+
+// Ler o número do usuário
+const numero = lerNumero();
+
+// Calcular a soma dos números pares até o número fornecido
+const somaPares = calcularSomaPares(numero);
+
+// Exibir a soma dos números pares
+document.write("A soma dos números pares até " + numero + " é: " + somaPares);
+
+    </script>
+</body>
+</html>

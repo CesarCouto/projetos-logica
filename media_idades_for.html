@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Função para ler o nome e a idade de uma pessoa
+function lerDadosPessoa(numeroPessoa) {
+    const nome = prompt("Digite o nome da " + numeroPessoa + "ª pessoa:");
+    const idade = parseInt(prompt("Digite a idade da " + numeroPessoa + "ª pessoa:"));
+    return idade;
+}
+
+// Função para calcular a média das idades
+function calcularMediaIdades(idades) {
+    let soma = 0;
+
+    // Calcula a soma das idades
+    for (let i = 0; i < idades.length; i++) {
+        soma += idades[i];
+    }
+
+    // Calcula a média das idades
+    const media = soma / idades.length;
+    return media;
+}
+
+// Array para armazenar as idades
+const idades = [];
+
+// Loop para ler os dados das 5 pessoas
+for (let i = 1; i <= 5; i++) {
+    const idade = lerDadosPessoa(i);
+    idades.push(idade); // Adiciona a idade ao array
+}
+
+// Calcula a média das idades
+const media = calcularMediaIdades(idades);
+
+// Exibe a média das idades
+document.write("A média das idades é: " + media.toFixed(2));
+
+    </script>
+</body>
+</html>

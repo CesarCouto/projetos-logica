@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Função para ler o nome e a idade de uma pessoa
+function lerNomeEIdade() {
+    const nome = prompt("Digite o nome da pessoa:");
+    if (nome.toLowerCase() === "fim") {
+        return { nome: "fim", idade: 0 }; // Se "fim" for digitado, retorna um objeto com nome "fim" e idade 0
+    }
+    const idade = parseInt(prompt("Digite a idade de " + nome + ":"));
+    return { nome: nome, idade: idade };
+}
+
+// Função para calcular a média das idades
+function calcularMediaIdades(pessoas) {
+    let somaIdades = 0;
+    let contador = 0;
+
+    // Loop para calcular a soma das idades
+    for (let i = 0; i < pessoas.length; i++) {
+        somaIdades += pessoas[i].idade;
+        contador++;
+    }
+
+    // Calcula a média das idades
+    const media = somaIdades / contador;
+    return media;
+}
+
+// Array para armazenar as pessoas
+const pessoas = [];
+
+// Loop para ler os dados das pessoas
+while (true) {
+    const pessoa = lerNomeEIdade();
+    if (pessoa.nome === "fim") {
+        break; // Se o nome for "fim", encerra o loop
+    }
+    pessoas.push(pessoa); // Adiciona a pessoa ao array
+}
+
+// Calcula a média das idades
+const media = calcularMediaIdades(pessoas);
+
+// Exibe a média das idades
+console.log("A média das idades é: " + media.toFixed(2));
+
+    </script>
+</body>
+</html>

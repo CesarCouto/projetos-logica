@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Função para ler o número do usuário
+        function lerNumero() {
+            return parseInt(prompt("Digite um número inteiro:"));
+        }
+        
+        // Função para exibir os dígitos separadamente
+        function exibirDigitosSeparadamente(numero) {
+            // Converte o número em uma string para facilitar a manipulação dos dígitos
+            const numeroString = numero.toString();
+        
+            console.log("Os dígitos de " + numero + " são:");
+        
+            // Loop para percorrer cada dígito do número
+            for (let i = 0; i < numeroString.length; i++) {
+                console.log(numeroString[i]);
+            }
+        }
+        
+        // Ler o número do usuário
+        const numero = lerNumero();
+        
+        // Exibir os dígitos separadamente
+        exibirDigitosSeparadamente(numero);
+        </script>
+</body>
+</html>

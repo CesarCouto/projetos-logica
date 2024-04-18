@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Função para ler o número do usuário
+function lerNumero() {
+    return parseInt(prompt("Digite um número inteiro para calcular o fatorial:"));
+}
+
+// Função para calcular o fatorial de um número
+function calcularFatorial(numero) {
+    let fatorial = 1;
+
+    // Loop para multiplicar os números de 1 até o número fornecido
+    for (let i = 1; i <= numero; i++) {
+        fatorial *= i;
+    }
+
+    return fatorial;
+}
+
+// Ler o número do usuário
+const numero = lerNumero();
+
+// Calcular o fatorial do número fornecido
+const resultado = calcularFatorial(numero);
+
+// Exibir o resultado
+console.log("O fatorial de " + numero + " é: " + resultado);
+
+    </script>
+</body>
+</html>
