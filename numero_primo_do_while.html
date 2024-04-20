@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero;
+
+do {
+  numero = parseInt(prompt("Digite um número inteiro:"));
+} while (isNaN(numero));
+
+let divisor = 2;
+let primo = true;
+
+do {
+  if (numero % divisor === 0 && numero !== divisor) {
+    primo = false;
+    break; // Se encontrar um divisor diferente de 1 e do próprio número, não é primo
+  }
+  divisor++;
+} while (divisor <= Math.sqrt(numero));
+
+if (primo && numero > 1) {
+  console.log(numero + " é um número primo.");
+} else {
+  console.log(numero + " não é um número primo.");
+}
+
+    </script>
+</body>
+</html>

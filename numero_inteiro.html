@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero;
+
+do {
+  numero = parseInt(prompt("Digite um número inteiro:"));
+} while (isNaN(numero));
+
+console.log("Os dígitos do número " + numero + " são:");
+
+do {
+  let digito = numero % 10; // Obtém o último dígito do número
+  console.log(digito);
+  numero = Math.floor(numero / 10); // Remove o último dígito do número
+} while (numero > 0);
+
+    </script>
+</body>
+</html>

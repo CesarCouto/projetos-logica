@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero;
+
+do {
+  numero = parseInt(prompt("Digite um número inteiro:"));
+} while (isNaN(numero));
+
+let fibonacci = [];
+fibonacci[0] = 0;
+fibonacci[1] = 1;
+let i = 2;
+
+do {
+  fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+  i++;
+} while (fibonacci[i - 1] + fibonacci[i - 2] <= numero);
+
+console.log("Sequência de Fibonacci até " + numero + ":");
+
+for (let j = 0; j < fibonacci.length; j++) {
+  if (fibonacci[j] <= numero) {
+    console.log(fibonacci[j]);
+  } else {
+    break;
+  }
+}
+
+    </script>
+</body>
+</html>
