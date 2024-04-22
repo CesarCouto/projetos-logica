@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        body{
+            background-color: rgb(70, 142, 236);
+            font: nomal 15px Arial;
+        }
+
+        header{
+            color: #FFF;
+            text-align: center;
+        }
+
+        section{
+            background-color: #FFF;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 5px 5px 10px #00000069;
+            text-align: center;
+        }
+
+        footer{
+            color: #FFF;
+            text-align: center;
+            font-style: italic;
+        }
+
+        #foto img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        #msg{
+            padding-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+
+
+    <section>
+
+        <div id="msg">
+            Aqui vai aparecer a mensagem...
+        </div>
+
+        <div id="foto">
+            <img id="imagem" src="imagens/manhã.jpg" alt="foto da manha" />
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; Curso em Video.</p>
+    </footer>
+
+    <script>
+
+
+        function carregar(){
+
+        let msg = window.document.getElementById('msg')
+        let img = window.document.getElementById('imagem')
+        let data = new Date()
+        let hora = data.getHours()
+
+        msg.innerHTML = `Agora são ${hora} horas.`
+
+        if( hora >= 0 && hora < 12){
+            msg.innerHTML = `Agora são ${hora} da manhã`
+            document.body.style.backgroundColor = '#F3A479' 
+        }else if(hora >= 12 && hora <= 18){
+            msg.innerHTML = `Agora são ${hora} da tarde`
+            img.src = 'imagens/tarde.jpg'
+            document.body.style.backgroundColor = '#B42C00' 
+        } else{
+            msg.innerHTML = `Agora são ${hora} da noite`
+            imagem.src = 'imagens/noite.jpg'
+            document.body.style.backgroundColor = '#9A7CB5' 
+        }
+        }
+    </script>
+</body>
+</html>
